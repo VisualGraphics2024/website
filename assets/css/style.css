@@ -294,9 +294,9 @@ body {
 }
 
 .nav-open-btn {
-    color: var(--color);
+    color: black;
     font-size: 32px;
-    padding: 4px;
+    padding: 5px;
 }
 
 .navbar {
@@ -370,7 +370,7 @@ body {
 \*-----------------------------------*/
 
 .hero {
-    background-image: url("../images/hero-bg-bottom.png"), url("../images/hero-bg.png"), var(--gradient-1);
+    background-image: url("../images/hero-bg-bottom.png"), url("../images/hero-bg.png");
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: -280px bottom, center, center;
     background-size: auto, cover, auto;
@@ -390,13 +390,13 @@ body {
 }
 
 .hero-title {
-    color: var(--white);
+    color: black;
     font-size: var(--fs-1);
     margin-block-end: 20px;
 }
 
 .hero-text {
-    color: var(--white);
+    color: rgb(55, 54, 54);
     font-size: var(--fs-8);
     margin-block-end: 30px;
 }
@@ -653,7 +653,8 @@ body {
 }
 
 .footer-top {
-    background-image: url("../images/footer-bg.png"), var(--gradient-1);
+    background-image: url("../images/footer-bg.png");
+    background-color: #eee;
     background-repeat: no-repeat;
     background-size: auto, 200%;
     background-position: center, center;
@@ -714,6 +715,7 @@ body {
 .footer-item-link):not(address):is(:hover,
 :focus) {
     text-decoration: underline;
+    color: black;
 }
 
 .footer-item {
@@ -754,6 +756,19 @@ body {
     align-items: end;
     width:350px;
 }
+.logo2{
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column;
+    align-items: end;
+    width:350px;
+}
+.logo2 .image img{
+    max-width:50%;
+}
+.logo_name{
+ margin-right: auto;
+}
 /*-----------------------------------*\
   #GO TO TOP
 \*-----------------------------------*/
@@ -793,9 +808,41 @@ body {
  * responsive for larger than 550px screen
  */
  @media (max-width: 767px) {
+    .logo1{
+        width: 100%;
+        display: flex;
+    justify-content: end;
+    align-items: center;
+    }
+    .header h1 {
+        color: black;
+        font-size: 25px;
+    }
+    .header.active h1 {
+        color: black;
+        font-size: 25px;
+    }
+    .image img{
+        max-width:50%;
+        display: flex;
+        align-items: center;
+        margin-left: 35px;
+        margin-bottom: 5px;
+    }
+    
+    
+    .logo2{
+        width:30%;
+    }
+    .hero-title, .hero-text{
+        text-align: left;
+    }
     /* Header */
     .header .btn {
       display: none;
+    }
+    .btn{
+        margin-left: 120px;
     }
   
     .navbar-list {
@@ -1047,7 +1094,7 @@ body {
         border-bottom: none;
     }
     .navbar-link {
-        color: var(--color);
+        color: black
     }
     /**
    * HERO
@@ -1068,6 +1115,9 @@ body {
    */
     .service-list {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-list-title{
+        color: black;
     }
     /**
    * FEATURES
@@ -1099,6 +1149,7 @@ body {
     }
     .footer-brand .text {
         max-width: 45ch;
+        color: rgb(59, 58, 58);
     }
 }
 
